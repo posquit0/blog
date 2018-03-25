@@ -1,0 +1,63 @@
+baseURL = "https://blog.posquit0.com"
+languageCode = "ko-KR"
+title = "Posquit0"
+theme = "hugo-nuo"
+# Make .Summary and .WordCount behave correctly for CJK languages
+hasCJKLanguage = true
+enableRobotsTXT = true
+PygmentsCodeFences = true
+canonifyurls = true
+
+# Disqus Username
+disqusShortname = "posquit0"
+
+# Google Analytics UA number
+googleAnalytics = "UA-33369276-1"
+
+# Copyright of your post
+copyright = "© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce."
+
+# Initial site menu, you can extend menu with content.
+[[menu.main]]
+  name = "Posts"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "GitHub"
+  weight = 20
+  identifier = "works"
+  url = "https://github.com/posquit0"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+
+# Add your own params here
+[params]
+  author = "Byungjin Park"
+  avatar = "/img/avatar.jpg"
+  seotitle = "米老朱的博客 Ritchie Pub."
+  subtitle = "Software Architect"
+  description = "这里是 @米老朱 的个人博客，记录他在互联网新世界探索的点点滴滴 This is melaozhu's personal blog, he takes note here while exploring the new world."
+  paginate = 10
+
+  # Choose your social networks
+  email = "posquit0.bj@gmail.com"
+  github = "posquit0"
+  # twitter = "posquit0"
+  linkedin = "posquit0"
+  facebook = "posquit0"
+  # google = "109063353665074282689"
+  # instagram = "melaozhu"
+  # medium = "melaozhu"
+  # quora = "melaozhu"
+  # dribbble = "laozhu"
+  # behance = "melaozhu"
+
+  # Google Webmaster
+  # https://www.google.com/webmasters/
+  # googleSiteVerification = ""
