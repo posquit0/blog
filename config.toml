@@ -9,7 +9,7 @@ PygmentsCodeFences = true
 canonifyurls = true
 
 # Disqus Username
-disqusShortname = "posquit0"
+disqusShortname = "posquit0-blog"
 
 # Google Analytics UA number
 googleAnalytics = "UA-33369276-1"
