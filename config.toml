@@ -1,4 +1,4 @@
-baseURL = "http://blog.posquit0.com"
+# baseURL = "http://blog.posquit0.com"
 languageCode = "ko-KR"
 title = "Posquit0"
 theme = "beautifulhugo"
