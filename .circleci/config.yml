@@ -1,0 +1,44 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      # Primary container
+      - image: cibuilds/hugo
+    environment:
+      HUGO_PUBLISHDIR: public
+    steps:
+      - checkout
+      - run:
+          name: Install Submodules
+          command: git submodule sync && git submodule update --init
+      - run:
+          name: Build Static Site for Production
+          # command: hugo --buildDrafts
+          command: hugo
+          environment:
+            HUGO_ENV: production
+      # - run: htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html --empty-alt-ignore --disable-external
+      - deploy:
+          name: Deploy to GitHub Pages
+          command: |
+            if [ $CIRCLE_BRANCH == "master" ]; then
+              ls -al themes/beautifulhugo
+            elif [ $CIRCLE_TAG ]; then
+              echo "hello"
+            fi
+      # - store_test_results:
+      #     path: ~/reports
+      # - store_artifacts:
+      #     path: ~/reports
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          context: hugo
+          filters:
+            branches:
+              only:
+                - master
